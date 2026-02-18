@@ -10,11 +10,12 @@ from nanobot.agent.tools.cron import CronTool
 from nanobot.agent.tools.mode import ModeTool
 from nanobot.agent.tools.local import LocalTool
 from nanobot.agent.tools.http_request import HttpRequestTool
+from nanobot.agent.tools.agent_zero_tool import AgentZeroTool
 
 __all__ = [
     'Tool',
     'ReadFileTool', 'WriteFileTool', 'EditFileTool', 'ListDirTool',
     'ExecTool', 'WebSearchTool', 'WebFetchTool', 'MessageTool',
     'SpawnTool', 'CronTool',
-    'ModeTool', 'LocalTool', 'HttpRequestTool'
+    'ModeTool', 'LocalTool', 'HttpRequestTool', 'AgentZeroTool'
 ]

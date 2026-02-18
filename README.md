@@ -1,25 +1,23 @@
 <div align="center">
-  <img src="metalclaw_logo_new.jpg" alt="nanobot" width="500">
+  <img src="metalclaw_logo_new.jpg" alt="MetalClaw" width="500">
   <h1>MetalClaw: Ultra-Lightweight Personal AI Assistant</h1>
   <p>
-    <a href="https://pypi.org/project/nanobot-ai/"><img src="https://img.shields.io/pypi/v/nanobot-ai" alt="PyPI"></a>
-    <a href="https://pepy.tech/project/nanobot-ai"><img src="https://static.pepy.tech/badge/nanobot-ai" alt="Downloads"></a>
     <img src="https://img.shields.io/badge/python-≥3.11-blue" alt="Python">
     <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/Feishu-Group-E9DBFC?style=flat&logo=feishu&logoColor=white" alt="Feishu"></a>
-    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/WeChat-Group-C5EAB4?style=flat&logo=wechat&logoColor=white" alt="WeChat"></a>
-    <a href="https://discord.gg/MnCvHqpUGB"><img src="https://img.shields.io/badge/Discord-Community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
+    <a href="https://github.com/agent0ai/agent-zero"><img src="https://img.shields.io/badge/Agent_Zero-Integration-red?style=flat" alt="Agent Zero"></a>
+    <a href="https://github.com/HKUDS/nanobot"><img src="https://img.shields.io/badge/Fork_of-nanobot-blue?style=flat" alt="Forked from nanobot"></a>
   </p>
 </div>
 
-🐈 **nanobot** is an **ultra-lightweight** personal AI assistant inspired by [OpenClaw](https://github.com/openclaw/openclaw) 
+🐈 **MetalClaw** is an **ultra-lightweight** personal AI assistant inspired by [OpenClaw](https://github.com/openclaw/openclaw) and forked from [nanobot](https://github.com/HKUDS/nanobot)
 
 ⚡️ Delivers core agent functionality in just **~4,000** lines of code — **99% smaller** than Clawdbot's 430k+ lines.
 
-📏 Real-time line count: **3,696 lines** (run `bash core_agent_lines.sh` to verify anytime)
+🔥 **NEW:** Seamless integration with [Agent Zero](https://github.com/agent0ai/agent-zero) — powerful multi-agent AI automation!
 
 ## 📢 News
 
+- **2026-02-19** 🎉 **MetalClaw now integrates with Agent Zero!** — seamless HTTP API connection to the powerful multi-agent AI automation platform. See [Agent Zero Integration](#agent-zero-integration) for setup instructions.
 - **2026-02-16** 🦞 nanobot now integrates a [ClawHub](https://clawhub.ai) skill — search and install public agent skills.
 - **2026-02-15** 🔑 nanobot now supports OpenAI Codex provider with OAuth login support.
 - **2026-02-14** 🔌 nanobot now supports MCP! See [MCP section](#mcp-model-context-protocol) for details.
@@ -36,7 +34,7 @@
 - **2026-02-03** ⚡ Integrated vLLM for local LLM support and improved natural language task scheduling!
 - **2026-02-02** 🎉 nanobot officially launched! Welcome to try 🐈 nanobot!
 
-## Key Features of nanobot:
+## Key Features of MetalClaw:
 
 🪶 **Ultra-Lightweight**: Just ~4,000 lines of core agent code — 99% smaller than Clawdbot.
 
@@ -45,6 +43,8 @@
 ⚡️ **Lightning Fast**: Minimal footprint means faster startup, lower resource usage, and quicker iterations.
 
 💎 **Easy-to-Use**: One-click to deploy and you're ready to go.
+
+🔥 **Agent Zero Integration**: Seamlessly connect to [Agent Zero](https://github.com/agent0ai/agent-zero) for advanced multi-agent automation, web browsing, and code execution capabilities.
 
 ## 🏗️ Architecture
 
@@ -80,22 +80,12 @@
 **Install from source** (latest features, recommended for development)
 
 ```bash
-git clone https://github.com/HKUDS/nanobot.git
-cd nanobot
+git clone https://github.com/JunSuzuki1973/MetalClaw.git
+cd MetalClaw
 pip install -e .
 ```
 
-**Install with [uv](https://github.com/astral-sh/uv)** (stable, fast)
-
-```bash
-uv tool install nanobot-ai
-```
-
-**Install from PyPI** (stable)
-
-```bash
-pip install nanobot-ai
-```
+**Note:** MetalClaw is a fork of [nanobot](https://github.com/HKUDS/nanobot) by [HKUDS](https://github.com/HKUDS). We extend it with Agent Zero integration and other enhancements.
 
 ## 🚀 Quick Start
 
@@ -871,7 +861,7 @@ nanobot/
 
 PRs welcome! The codebase is intentionally small and readable. 🤗
 
-**Roadmap** — Pick an item and [open a PR](https://github.com/HKUDS/nanobot/pulls)!
+**Roadmap** — Pick an item and [open a PR](https://github.com/JunSuzuki1973/MetalClaw/pulls)!
 
 - [ ] **Multi-modal** — See and hear (images, voice, video)
 - [ ] **Long-term memory** — Never forget important context
@@ -881,29 +871,117 @@ PRs welcome! The codebase is intentionally small and readable. 🤗
 
 ### Contributors
 
+MetalClaw is a fork of [nanobot](https://github.com/HKUDS/nanobot). Original contributors:
+
 <a href="https://github.com/HKUDS/nanobot/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=HKUDS/nanobot&max=100&columns=12&updated=20260210" alt="Contributors" />
+</a>
+
+MetalClaw contributors:
+
+<a href="https://github.com/JunSuzuki1973/MetalClaw/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JunSuzuki1973/MetalClaw&max=100&columns=12&updated=20260219" alt="Contributors" />
 </a>
 
 
 ## ⭐ Star History
 
 <div align="center">
-  <a href="https://star-history.com/#HKUDS/nanobot&Date">
+  <a href="https://star-history.com/#JunSuzuki1973/MetalClaw&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date" />
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=JunSuzuki1973/MetalClaw&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=JunSuzuki1973/MetalClaw&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=JunSuzuki1973/MetalClaw&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
     </picture>
   </a>
 </div>
 
+## 🔥 Agent Zero Integration
+
+MetalClaw seamlessly integrates with [Agent Zero](https://github.com/agent0ai/agent-zero), a powerful multi-agent AI automation platform for complex tasks.
+
+### Why Agent Zero?
+
+- **Multi-Agent Collaboration:** Multiple AI agents working together on complex tasks
+- **Advanced Capabilities:** Web browsing, code execution, file operations, and more
+- **Task Automation:** Schedule and automate complex workflows
+- **Knowledge Management:** Built-in knowledge base and memory system
+
+### Setup Instructions
+
+1. **Install Agent Zero:**
+```bash
+git clone https://github.com/agent0ai/agent-zero.git
+cd agent-zero
+docker compose up -d
+```
+
+2. **Configure Agent Zero:**
+```bash
+# Access Agent Zero container
+docker exec -it agent-zero bash
+
+# Set WEB_UI_HOST to expose API externally
+echo "WEB_UI_HOST=0.0.0.0" >> /root/.openclaw/workspace/agent-zero/usr/.env
+
+# Restart Agent Zero
+exit
+docker restart agent-zero
+
+# Start Agent Zero server (in container)
+docker exec agent-zero bash -c 'cd /root/.openclaw/workspace/agent-zero && source venv/bin/activate && nohup python run_ui.py > /tmp/agent-zero-ui.log 2>&1 &'
+```
+
+3. **Verify Connection:**
+```bash
+# Check health
+curl http://localhost:5000/health
+
+# Should return: {"status":"ok"}
+```
+
+4. **Get API Key:**
+```bash
+# Get runtime ID
+RUNTIME_ID=$(curl -s -H "Origin: http://localhost:5000" http://localhost:5000/csrf_token | python3 -c "import sys, json; print(json.load(sys.stdin)[\"runtime_id\"])")
+
+# Generate API key (SHA256 hash of runtime_id::username:password)
+# Default username/password is empty, so just use runtime_id::
+echo -n "${RUNTIME_ID}::" | sha256sum | cut -d' ' -f1 | xxd -r -p | base64 | head -c 16
+```
+
+5. **Update MetalClaw:**
+Edit `nanobot/agent/tools/agent_zero_tool.py` and update `self.api_key` with the generated key.
+
+### Usage
+
+MetalClaw automatically connects to Agent Zero when you use the `exec_agent_zero` tool. Simply send a message and MetalClaw will:
+
+1. Get CSRF token from Agent Zero
+2. Send your message with API key authentication
+3. Receive Agent Zero's response
+4. Forward it back to you
+
+Example conversation:
+```
+You: Use Agent Zero to search for AI trends
+MetalClaw: 🔌 Connecting to Agent Zero...
+MetalClaw: **Here are the latest AI trends:**
+- Multi-agent systems
+- Code generation tools
+- Voice AI assistants
+```
+
+### Recommended by [JUN](https://github.com/JunSuzuki1973)
+
+"I recommend using MetalClaw + Agent Zero together for the best AI automation experience. MetalClaw provides the interface, while Agent Zero handles complex multi-agent tasks. This combination is powerful and flexible!"
+
 <p align="center">
-  <em> Thanks for visiting ✨ nanobot!</em><br><br>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.nanobot&style=for-the-badge&color=00d4ff" alt="Views">
+  <em> Thanks for visiting ✨ MetalClaw!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=JunSuzuki1973.MetalClaw&style=for-the-badge&color=00d4ff" alt="Views">
 </p>
 
 
 <p align="center">
-  <sub>nanobot is for educational, research, and technical exchange purposes only</sub>
+  <sub>MetalClaw is for educational, research, and technical exchange purposes only</sub>
 </p>
