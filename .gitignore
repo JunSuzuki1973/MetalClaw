@@ -20,3 +20,12 @@ poetry.lock
 .pytest_cache/
 botpy.log
 tests/
+# Config files with sensitive data
+config.json
+*.json
+!pyproject.toml
+
+# Sensitive data directories
+.nanobot/
+.opencode/
+.secrets/
