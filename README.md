@@ -17,6 +17,7 @@
 
 ## 📢 News
 
+- **2026-02-20** 🔌 **MetalClaw now integrates with n8n!** — seamless REST API connection to n8n workflow automation platform. See [n8n Integration](#n8n-integration) for setup instructions.
 - **2026-02-19** 🎉 **MetalClaw now integrates with Agent Zero!** — seamless HTTP API connection to the powerful multi-agent AI automation platform. See [Agent Zero Integration](#agent-zero-integration) for setup instructions.
 - **2026-02-16** 🦞 nanobot now integrates a [ClawHub](https://clawhub.ai) skill — search and install public agent skills.
 - **2026-02-15** 🔑 nanobot now supports OpenAI Codex provider with OAuth login support.
@@ -1037,6 +1038,63 @@ MetalClaw: **Here are the latest AI trends:**
 ### Recommended by [JUN](https://github.com/JunSuzuki1973)
 
 "I recommend using MetalClaw + Agent Zero together for the best AI automation experience. MetalClaw provides the interface, while Agent Zero handles complex multi-agent tasks. This combination is powerful and flexible!"
+
+## 🔌 n8n Integration
+
+MetalClaw seamlessly integrates with [n8n](https://n8n.io/), a powerful workflow automation platform that allows you to connect and automate various services and applications.
+
+### Why n8n?
+
+- **Workflow Management:** Create and manage complex workflows with a visual editor
+- **Automation:** Automate repetitive tasks and integrate with 400+ services
+- **REST API:** Full control over workflows via REST API
+- **Self-Hosted:** Run n8n on your own server for complete control
+
+### Setup Instructions
+
+1. **Install n8n:**
+```bash
+# Using Docker
+docker run -it --rm \
+  --name n8n \
+  -p 5678:5678 \
+  -v ~/.n8n:/home/node/.n8n \
+  n8nio/n8n
+```
+
+2. **Configure n8n:**
+- Access n8n at `http://localhost:5678`
+- Create your admin account
+- Create workflows as needed
+
+3. **Update MetalClaw:**
+Edit `nanobot/agent/tools/n8n_tool.py` and configure:
+```python
+self.api_url = "http://localhost:5678/api/v1"
+self.api_key = "your-n8n-api-key"  # Get from n8n settings
+```
+
+### Usage
+
+MetalClaw automatically connects to n8n when you use the `exec_n8n` tool. Available actions:
+
+| Action | Description |
+|--------|-------------|
+| `list` | List all workflows (filter by active status) |
+| `get` | Get a specific workflow by ID |
+| `create` | Create a new workflow from JSON |
+| `update` | Update a workflow by ID |
+| `execute` | Execute a workflow by ID |
+| `delete` | Delete a workflow by ID |
+
+Example conversation:
+```
+You: List all active n8n workflows
+MetalClaw: 🔌 Connecting to n8n...
+MetalClaw: Here are your active workflows:
+- test_workflow (ID: 8b9c5a3e1f2d4c6b8a0d1e2f3a4b5c6d)
+- main_workflow (ID: 7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c)
+```
 
 <p align="center">
   <em> Thanks for visiting ✨ MetalClaw!</em><br><br>
