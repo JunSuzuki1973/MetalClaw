@@ -896,6 +896,68 @@ MetalClaw contributors:
   </a>
 </div>
 
+## 🔥 n8n Integration
+
+MetalClaw seamlessly integrates with [n8n](https://n8n.io/), a powerful workflow automation platform.
+
+### Why n8n?
+
+- **Workflow Management:** List, get, create, update, and execute workflows
+- **Automation:** Automate complex business processes and tasks
+- **Visual Editor:** Design workflows with n8n's intuitive visual interface
+- **RESTful API:** Full control over n8n via REST API
+
+### Setup Instructions
+
+1. **Install n8n:**
+```bash
+docker run -it --rm \
+  --name n8n \
+  -p 5678:5678 \
+  -v ~/.n8n:/home/node/.n8n \
+  n8nio/n8n
+```
+
+2. **Configure MetalClaw:**
+Edit `nanobot/agent/tools/n8n_tool.py` and update the API settings:
+```python
+self.api_url = "http://localhost:5678"  # n8n API URL
+self.api_key = "your-n8n-api-key"       # n8n API key (optional)
+```
+
+3. **Get API Key (if needed):**
+```bash
+# Access n8n settings → API → Create new API key
+# Or use n8n without API key (default Docker setup)
+```
+
+### Usage
+
+MetalClaw provides full control over n8n workflows:
+
+| Action | Command | Description |
+|--------|---------|-------------|
+| **List** | `list` | List all workflows (filter by active status) |
+| **Get** | `get id=xxx` | Get a specific workflow by ID |
+| **Create** | `create @workflow.json` | Create a new workflow from JSON |
+| **Update** | `update id=xxx @workflow.json` | Update a workflow by ID |
+| **Execute** | `execute id=xxx` | Execute a workflow by ID |
+| **Delete** | `delete id=xxx` | Delete a workflow by ID |
+
+Example conversation:
+```
+You: List all active n8n workflows
+MetalClaw: 🔌 Querying n8n...
+MetalClaw: **Found 3 workflows:**
+- test_workflow (active)
+- main_workflow (active)
+- sample_workflow (inactive)
+
+You: Execute workflow 8b9c5a3e1f2d4c6b8a0d1e2f3a4b5c6d
+MetalClaw: 🔌 Executing workflow...
+MetalClaw: ✅ Workflow executed successfully!
+```
+
 ## 🔥 Agent Zero Integration
 
 MetalClaw seamlessly integrates with [Agent Zero](https://github.com/agent0ai/agent-zero), a powerful multi-agent AI automation platform for complex tasks.
