@@ -21,6 +21,7 @@ from nanobot.agent.tools.message import MessageTool
 from nanobot.agent.tools.spawn import SpawnTool
 from nanobot.agent.tools.cron import CronTool
 from nanobot.agent.tools.agent_zero_tool import AgentZeroTool
+from nanobot.agent.tools.n8n import N8nTool
 from nanobot.agent.memory import MemoryStore
 from nanobot.agent.subagent import SubagentManager
 from nanobot.session.manager import Session, SessionManager
@@ -125,7 +126,10 @@ class AgentLoop:
 
         # Agent Zero tool (for advanced AI capabilities)
         self.tools.register(AgentZeroTool(workspace=self.workspace))
-        
+
+        # n8n tool (for workflow management)
+        self.tools.register(N8nTool())
+
     async def _connect_mcp(self) -> None:
         """Connect to configured MCP servers (one-time, lazy)."""
         if self._mcp_connected or not self._mcp_servers:
